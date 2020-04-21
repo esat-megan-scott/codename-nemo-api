@@ -17,15 +17,15 @@ const surveySchema = new mongoose.Schema({
   },
   option3: {
     type: String,
-    required: true
+    required: false
   },
   option4: {
     type: String,
-    required: true
+    required: false
   },
   option5: {
     type: String,
-    required: true
+    required: false
   },
   answers: [answerSchema],
   owner: {

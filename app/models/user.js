@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const Survey = require('./survey.js')
+const surveySchema = Survey.schema
 
 const userSchema = new mongoose.Schema({
   email: {
@@ -10,7 +12,8 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  token: String
+  token: String,
+  surveys: [surveySchema]
 }, {
   timestamps: true,
   toObject: {

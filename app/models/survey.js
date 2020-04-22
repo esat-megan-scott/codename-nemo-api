@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 
-const answerSchema = require('./answer.js')
+const Answer = require('./answer.js')
+const answerSchema = Answer.schema
+
+// const answerSchema = require('./answer.js')
 
 const surveySchema = new mongoose.Schema({
   question: {

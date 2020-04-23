@@ -5,6 +5,11 @@ const answerSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  question: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Survey',
+    required: true
+  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',

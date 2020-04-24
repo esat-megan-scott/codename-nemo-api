@@ -5,6 +5,11 @@ const answerSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  question: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Survey',
+    required: true
+  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
@@ -14,4 +19,4 @@ const answerSchema = new mongoose.Schema({
   timestamps: true
 })
 
-module.exports = answerSchema
+module.exports = mongoose.model('Answer', answerSchema)

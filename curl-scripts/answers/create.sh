@@ -1,7 +1,7 @@
 #!/bin/bash
 
 API="http://localhost:4741"
-URL_PATH="/surveys"
+URL_PATH="/answers"
 
 curl "${API}${URL_PATH}" \
   --include \
@@ -9,12 +9,10 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
-    "survey": {
-      "title": "'"${TITLE}"'",
-      "question": "'"${QUESTION}"'",
-      "options": []
+    "answer": {
+      "choice": "'"${CHOICE}"'",
+      "question": "'"${QUESTION}"'"
     }
-
   }'
 
 echo

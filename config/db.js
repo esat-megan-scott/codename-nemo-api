@@ -1,7 +1,7 @@
 'use strict'
 
 // creating a base name for the mongodb
-const mongooseBaseName = 'codename-nemo'
+const mongooseBaseName = 'codename-nemo-api'
 
 // create the mongodb uri for development and test
 const database = {
